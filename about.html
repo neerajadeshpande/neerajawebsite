@@ -11,18 +11,21 @@ a{color:#b0206a;text-decoration:none}
 a:hover{color:#d5352a;text-decoration:underline}
 ::selection{background:#d5352a;color:#fff}
 input::placeholder,textarea::placeholder{color:rgba(176,32,106,.4)}
-.hd{display:none}
+.star-margin{margin-left:-28px;margin-right:8px}
 nav.site-nav{position:sticky;top:0;z-index:10;background:#cfe3e1;display:flex;justify-content:center;align-items:center;gap:32px;padding:26px 44px;border-bottom:1px solid rgba(176,32,106,.2);flex-wrap:wrap}
 .hero-tagline{font:italic 400 22px/1.5 'Libre Baskerville',serif;color:rgba(176,32,106,.75);width:100%;white-space:nowrap;text-align:center}
 .page-section{background:#cfe3e1;padding:90px 28px 110px;position:relative;min-height:calc(100vh - 90px)}
+.box-inset{position:absolute;inset:18px;border:1px solid rgba(176,32,106,.25);pointer-events:none}
 .disclaimer{position:absolute;bottom:20px;right:28px;font:italic 400 10px/1.4 'Libre Baskerville',serif;color:#d5352a;white-space:nowrap;text-align:right}
 .section-heading{font:500 clamp(48px,7vw,84px)/1.02 'Libre Baskerville',serif;letter-spacing:-.01em;color:#b0206a;margin-bottom:40px;text-align:center;text-transform:uppercase}
 .item-link{color:#b0206a;text-decoration:none;border-bottom:1px solid rgba(176,32,106,.35)}
 .item-link:hover{color:#8c7468;border-bottom-color:#8c7468;text-decoration:none}
 @media (max-width:640px){
+  .star-margin{margin-left:0;margin-right:8px}
   nav.site-nav{gap:14px 18px;padding:16px 14px}
   .hero-tagline{font-size:17px;white-space:normal;padding:0 6px}
-  .page-section{padding:80px 18px 90px}
+  .page-section{padding:64px 26px 80px}
+  .box-inset{inset:10px}
   .disclaimer{position:static;bottom:auto;right:auto;margin-top:40px;white-space:normal;text-align:center}
 }
 </style>
@@ -49,7 +52,7 @@ nav.site-nav{position:sticky;top:0;z-index:10;background:#cfe3e1;display:flex;ju
   </div>
 </nav>
 <section class="page-section">
-  <div style="position:absolute;inset:18px;border:1px solid rgba(176,32,106,.25);pointer-events:none"></div>
+  <div class="box-inset"></div>
   <div style="max-width:820px;margin:0 auto;color:#b0206a">
     <div class="section-heading">About<br/>Me</div>
     <div style="max-width:560px;margin:0 auto 8px;border-radius:10px;overflow:hidden;position:relative">
