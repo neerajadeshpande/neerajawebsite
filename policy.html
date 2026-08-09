@@ -10,10 +10,15 @@ body{margin:0;background:#cfe3e1;font-family:'Libre Baskerville',serif;color:#b0
 a{color:#b0206a;text-decoration:none}
 a:hover{color:#d5352a;text-decoration:underline}
 ::selection{background:#d5352a;color:#fff}
+input::placeholder,textarea::placeholder{color:rgba(176,32,106,.4)}
+.hd{display:none}
 nav.site-nav{position:sticky;top:0;z-index:10;background:#cfe3e1;display:flex;justify-content:center;align-items:center;gap:32px;padding:26px 44px;border-bottom:1px solid rgba(176,32,106,.2);flex-wrap:wrap}
 .hero-tagline{font:italic 400 22px/1.5 'Libre Baskerville',serif;color:rgba(176,32,106,.75);width:100%;white-space:nowrap;text-align:center}
 .page-section{background:#cfe3e1;padding:90px 28px 110px;position:relative;min-height:calc(100vh - 90px)}
 .disclaimer{position:absolute;bottom:20px;right:28px;font:italic 400 10px/1.4 'Libre Baskerville',serif;color:#d5352a;white-space:nowrap;text-align:right}
+.section-heading{font:500 clamp(48px,7vw,84px)/1.02 'Libre Baskerville',serif;letter-spacing:-.01em;color:#b0206a;margin-bottom:40px;text-align:center;text-transform:uppercase}
+.item-link{color:#b0206a;text-decoration:none;border-bottom:1px solid rgba(176,32,106,.35)}
+.item-link:hover{color:#8c7468;border-bottom-color:#8c7468;text-decoration:none}
 @media (max-width:640px){
   nav.site-nav{gap:14px 18px;padding:16px 14px}
   .hero-tagline{font-size:17px;white-space:normal;padding:0 6px}
@@ -28,45 +33,57 @@ nav.site-nav{position:sticky;top:0;z-index:10;background:#cfe3e1;display:flex;ju
   <a href="about.html" style="color:rgba(176,32,106,.7);font:500 17px/1 'Libre Baskerville',serif">About Me</a>
   <a href="writing.html" style="color:rgba(176,32,106,.7);font:500 17px/1 'Libre Baskerville',serif">Selected Writing</a>
   <a href="policy.html" style="color:#d5352a;font:500 17px/1 'Libre Baskerville',serif">Policy Work</a>
-  <a href="substack.html" style="color:rgba(176,32,106,.7);font:500 17px/1 'Libre Baskerville',serif">Substack</a>
+  <a href="blog.html" style="color:rgba(176,32,106,.7);font:500 17px/1 'Libre Baskerville',serif">Blog</a>
   <a href="contact.html" style="color:rgba(176,32,106,.7);font:500 17px/1 'Libre Baskerville',serif">Get in Touch</a>
+  <span style="display:inline-block;width:1px;height:18px;background:rgba(176,32,106,.25)"></span>
+  <div style="display:flex;align-items:center;gap:16px">
+    <a href="https://x.com/neerajadeshp" aria-label="X" style="color:#b0206a;display:flex">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.4 8.5L23 22h-6.9l-5.4-6.9L4.3 22H1.2l7.9-9.1L1 2h7l4.9 6.3L18.9 2Zm-2.4 18h1.9L7.6 4h-2l10.9 16Z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/neeraja-deshpande-450298344/" aria-label="LinkedIn" style="color:#b0206a;display:flex">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+    </a>
+    <a href="https://neerajadeshpande.substack.com" aria-label="Substack" style="color:#b0206a;display:flex">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 2H2v5.5h20V2ZM2 10v12l10-6.1L22 22V10H2Z"/></svg>
+    </a>
+  </div>
 </nav>
 <section class="page-section">
   <div style="position:absolute;inset:18px;border:1px solid rgba(176,32,106,.25);pointer-events:none"></div>
   <div style="max-width:820px;margin:0 auto;color:#b0206a">
-    <div style="font:600 24px/1 'Libre Baskerville',serif;letter-spacing:.03em;word-spacing:.25em;text-transform:uppercase;color:rgba(176,32,106,.9);margin-bottom:34px;text-align:center">Policy Work</div>
+    <div class="section-heading">Policy<br/>Work</div>
     <div style="display:flex;flex-direction:column;gap:18px">
       <div style="font:400 19px/1.5 'Libre Baskerville',serif">
-          <a href="https://www.independentwomen.com/2026/08/03/policy-focus-safe-seen-and-supported/" style="color:#b0206a;text-decoration:none;border-bottom:1px solid rgba(176,32,106,.35)">Policy Focus: Safe, Seen, and Supported: What Actually Keeps K–12 Schools Secure</a>
-          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By Meaghan Mobbs & Neeraja Deshpande — Independent Women, August 2026</div>
+          <a href="https://www.independentwomen.com/2026/08/03/policy-focus-safe-seen-and-supported/" class="item-link">Policy Focus: Safe, Seen, and Supported: What Actually Keeps K–12 Schools Secure</a>
+          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By Meaghan Mobbs & <span style="color:#d5352a">Neeraja Deshpande</span> — Independent Women, August 2026</div>
         </div>
       <div style="font:400 19px/1.5 'Libre Baskerville',serif">
-          <a href="https://www.independentwomen.com/2026/03/02/policy-focus-louisianas-promising-let-teachers-teach-initiative/" style="color:#b0206a;text-decoration:none;border-bottom:1px solid rgba(176,32,106,.35)">Policy Focus: Louisiana's Promising "Let Teachers Teach" Initiative</a>
-          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By Neeraja Deshpande — Independent Women, March 2026</div>
+          <a href="https://www.independentwomen.com/2026/03/02/policy-focus-louisianas-promising-let-teachers-teach-initiative/" class="item-link">Policy Focus: Louisiana's Promising "Let Teachers Teach" Initiative</a>
+          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By <span style="color:#d5352a">Neeraja Deshpande</span> — Independent Women, March 2026</div>
         </div>
       <div style="font:400 19px/1.5 'Libre Baskerville',serif">
-          <a href="https://www.independentwomen.com/2026/02/10/the-dating-decade-hooking-up-hanging-out-and-swiping-right/" style="color:#b0206a;text-decoration:none;border-bottom:1px solid rgba(176,32,106,.35)">The Dating Decade: Hooking Up, Hanging Out, and Swiping Right</a>
-          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By Hadley Heath Manning, with Carrie Sheffield and Neeraja Deshpande — Independent Women, February 2026</div>
+          <a href="https://www.independentwomen.com/2026/02/10/the-dating-decade-hooking-up-hanging-out-and-swiping-right/" class="item-link">The Dating Decade: Hooking Up, Hanging Out, and Swiping Right</a>
+          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By Hadley Heath Manning, with Carrie Sheffield & <span style="color:#d5352a">Neeraja Deshpande</span> — Independent Women, February 2026</div>
         </div>
       <div style="font:400 19px/1.5 'Libre Baskerville',serif">
-          <a href="https://www.independentwomen.com/2025/12/01/policy-focus-artificial-intelligence-and-education/" style="color:#b0206a;text-decoration:none;border-bottom:1px solid rgba(176,32,106,.35)">Policy Focus: Artificial Intelligence and Education</a>
-          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By Neeraja Deshpande — Independent Women, December 2025</div>
+          <a href="https://www.independentwomen.com/2025/12/01/policy-focus-artificial-intelligence-and-education/" class="item-link">Policy Focus: Artificial Intelligence and Education</a>
+          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By <span style="color:#d5352a">Neeraja Deshpande</span> — Independent Women, December 2025</div>
         </div>
       <div style="font:400 19px/1.5 'Libre Baskerville',serif">
-          <a href="https://www.independentwomen.com/2025/08/01/policy-focus-abolish-the-curriculum-monopoly/" style="color:#b0206a;text-decoration:none;border-bottom:1px solid rgba(176,32,106,.35)">Policy Focus: Abolish the Curriculum Monopoly</a>
-          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By Neeraja Deshpande — Independent Women, August 2025</div>
+          <a href="https://www.independentwomen.com/2025/08/01/policy-focus-abolish-the-curriculum-monopoly/" class="item-link">Policy Focus: Abolish the Curriculum Monopoly</a>
+          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By <span style="color:#d5352a">Neeraja Deshpande</span> — Independent Women, August 2025</div>
         </div>
       <div style="font:400 19px/1.5 'Libre Baskerville',serif">
-          <a href="https://www.iwf.org/wp-content/uploads/2025/05/SWW_NM-Policy-Report.pdf" style="color:#b0206a;text-decoration:none;border-bottom:1px solid rgba(176,32,106,.35)">Identity Crisis – The Disjointed Reality in New Mexico: New Mexico Gender Policies Clash with Public Opinion</a>
-          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By Neeraja Deshpande and Inez Stepman, with a foreword by Prisha Mosley — Independent Women, June 2025</div>
+          <a href="https://www.iwf.org/wp-content/uploads/2025/05/SWW_NM-Policy-Report.pdf" class="item-link">Identity Crisis – The Disjointed Reality in New Mexico: New Mexico Gender Policies Clash with Public Opinion</a>
+          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By <span style="color:#d5352a">Neeraja Deshpande</span> & Inez Stepman, with a foreword by Prisha Mosley — Independent Women, June 2025</div>
         </div>
       <div style="font:400 19px/1.5 'Libre Baskerville',serif">
-          <a href="https://www.iwf.org/wp-content/uploads/2025/04/Give-Teachers-a-Break-Report.pdf" style="color:#b0206a;text-decoration:none;border-bottom:1px solid rgba(176,32,106,.35)">Give Teachers a Break: Cutting Red Tape to Unleash the Potential of America's Great Teachers</a>
-          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By Neeraja Deshpande, with a foreword by Beanie Geoghegan — Independent Women, May 2025</div>
+          <a href="https://www.iwf.org/wp-content/uploads/2025/04/Give-Teachers-a-Break-Report.pdf" class="item-link">Give Teachers a Break: Cutting Red Tape to Unleash the Potential of America's Great Teachers</a>
+          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By <span style="color:#d5352a">Neeraja Deshpande</span>, with a foreword by Beanie Geoghegan — Independent Women, May 2025</div>
         </div>
       <div style="font:400 19px/1.5 'Libre Baskerville',serif">
-          <a href="https://www.independentwomen.com/cruel-and-unusual-punishment-report/" style="color:#b0206a;text-decoration:none;border-bottom:1px solid rgba(176,32,106,.35)">Cruel and Unusual Punishment: Stopping the Dangerous Policies Putting Men in Women's Prisons</a>
-          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By May Mailman and Inez Stepman, with a foreward by Amie Ichikawa, and contributors Beth Parlato, Charlotte Whelan, Neeraja Deshpande, and Britton Miller — Independent Women, December 2024</div>
+          <a href="https://www.independentwomen.com/cruel-and-unusual-punishment-report/" class="item-link">Cruel and Unusual Punishment: Stopping the Dangerous Policies Putting Men in Women's Prisons</a>
+          <div style="color:rgba(176,32,106,.6);font:italic 400 16px/1 'Libre Baskerville',serif;margin-top:3px">By May Mailman & Inez Stepman, with a foreward by Amie Ichikawa, & contributors Beth Parlato, Charlotte Whelan, <span style="color:#d5352a">Neeraja Deshpande</span>, & Britton Miller — Independent Women, December 2024</div>
         </div>
     </div>
   </div>
